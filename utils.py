@@ -42,6 +42,6 @@ def plot_student_pie(df, index):
 def save_single_student(df, index, filename="student_report.csv"):
     if 0 <= index < len(df):
         df.iloc[[index]].to_csv(filename, index=False)
-        print(f"\n✅ Report of {df.iloc[index]['Name']} saved as '{filename}'")
+        print(f"\n Report of {df.iloc[index]['Name']} saved as '{filename}'")
     else:
-        print("❌ Invalid student index.")
+        print(" Invalid student index.")
