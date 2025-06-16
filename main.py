@@ -4,7 +4,7 @@ from utils import (
 )
 
 def show_menu():
-    print("\n📊 Student Marks Report System")
+    print("\n Student Marks Report System")
     print("1. Show Topper")
     print("2. Show Subject Averages")
     print("3. Plot Bar Chart of Total Marks")
@@ -23,14 +23,14 @@ def main():
 
         if choice == '1':
             topper, topper_index = get_topper(df)
-            print(f"\n👑 Topper: {topper['Name']} with {topper['Total']} marks (Index: {topper_index})")
+            print(f"\n Topper: {topper['Name']} with {topper['Total']} marks (Index: {topper_index})")
 
         elif choice == '2':
-            print("\n📚 Subject Averages:")
+            print("\n Subject Averages:")
             print(subject_averages(df))
 
         elif choice == '3':
-            print("\n📈 Showing Total Marks Chart...")
+            print("\n Showing Total Marks Chart...")
             plot_total_marks(df)
 
         elif choice == '4':
@@ -39,12 +39,12 @@ def main():
                 if 0 <= index < len(df):
                     plot_student_pie(df, index)
                 else:
-                    print("❌ Invalid index.")
+                    print(" Invalid index.")
             except ValueError:
-                print("⚠️ Please enter a valid number.")
+                print(" Please enter a valid number.")
 
         elif choice == '5':
-            print("\n👋 Exiting... Goodbye!")
+            print("\n Exiting... Goodbye!")
             break
 
         elif choice == '6':
@@ -55,10 +55,10 @@ def main():
                     filename = "student_report.csv"
                 save_single_student(df, index, filename)
             except ValueError:
-                print("⚠️ Please enter a valid number.")
+                print(" Please enter a valid number.")
 
         else:
-            print("❌ Invalid choice! Please try again.")
+            print(" Invalid choice! Please try again.")
 
 if __name__ == "__main__":
     main()
