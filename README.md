@@ -39,4 +39,4 @@ python main.py
 
 ## ✍️ Author
 
-Paras Nitin Jadhav
+Paras Jadhav
