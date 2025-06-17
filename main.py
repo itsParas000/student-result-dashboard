@@ -9,8 +9,8 @@ def show_menu():
     print("2. Show Subject Averages")
     print("3. Plot Bar Chart of Total Marks")
     print("4. Plot Pie Chart of a Student")
-    print("5. Exit")
-    print("6. Save a Student's Report to CSV")
+    print("5. Save a Student's Report to CSV")
+    print("6. Exit")
 
 def main():
     df = load_data()
@@ -43,11 +43,8 @@ def main():
             except ValueError:
                 print(" Please enter a valid number.")
 
+        
         elif choice == '5':
-            print("\n Exiting... Goodbye!")
-            break
-
-        elif choice == '6':
             try:
                 index = int(input("Enter student index to save: "))
                 filename = input("Enter filename (default: student_report.csv): ").strip()
@@ -56,6 +53,11 @@ def main():
                 save_single_student(df, index, filename)
             except ValueError:
                 print(" Please enter a valid number.")
+
+        
+        elif choice == '6':
+            print("\n Exiting... Goodbye!")
+            break
 
         else:
             print(" Invalid choice! Please try again.")
