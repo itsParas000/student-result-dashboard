@@ -36,7 +36,3 @@ python main.py
 
 - pandas
 - matplotlib
-
-## ✍️ Author
-
-Paras Jadhav
